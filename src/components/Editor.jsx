@@ -1,13 +1,14 @@
+// src/components/Editor.jsx
 import React from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { Highlight } from '../extensions/HighlightExtension'; // Import custom highlight extension
-import Toolbar from './Toolbar'; // Import toolbar with the highlight button
+import { Highlight } from '../extensions/HighlightExtension'; // Import the custom Highlight extension
+import Toolbar from './Toolbar'; // Import the Toolbar component
 
 const Editor = () => {
   const editor = useEditor({
-    extensions: [StarterKit, Highlight], // Initialize editor with StarterKit and Highlight extension
-    content: '<p>Hello <mark>world</mark>!</p>', // Sample content with initial highlight
+    extensions: [StarterKit, Highlight], // Include the custom Highlight extension
+    content: '<p>Hello <mark>world</mark>!</p>', // Sample content with some highlighted text
   });
 
   if (!editor) {
@@ -15,7 +16,7 @@ const Editor = () => {
   }
 
   return (
-    <div className="editor-content">
+    <div className="editor-container">
       <Toolbar editor={editor} /> {/* Pass editor instance to Toolbar */}
       <EditorContent editor={editor} />
     </div>

@@ -1,51 +1,92 @@
 /* src/App.css */
+
+/* General body styling */
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f9;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
+/* Centered editor container */
 .editor-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 600px;
-  height: 600px;
-  background-color: #fff;
+  width: 80%;
+  max-width: 900px;
+  min-height: 500px;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-top: 20px;
 }
 
+/* Styling the toolbar */
 .toolbar {
   width: 100%;
-  padding: 10px;
   display: flex;
   justify-content: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 
+/* Highlight button styles */
 button {
   padding: 10px 20px;
   font-size: 16px;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
-  color: #fff;
+  border-radius: 6px;
+  color: white;
+  background-color: #007bff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 10px;
 }
 
 button.active {
-  background-color: #4caf50;
+  background-color: #28a745; /* Green for active state */
 }
 
 button.inactive {
-  background-color: #f44336;
+  background-color: #ff3860; /* Red for inactive state */
 }
 
 button:hover {
   transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Content area where the editor is displayed */
+.editor-content {
+  width: 100%;
+  height: 300px;
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Optional: Style for highlighted text (mark) */
+mark {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
 }
