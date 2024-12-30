@@ -1,0 +1,12 @@
+.ProseMirror {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 150px;
+  }
+  
+  span[data-highlight] {
+    border-radius: 2px;
+    padding: 0.2em;
+  }
+  
